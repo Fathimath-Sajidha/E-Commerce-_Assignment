@@ -1,0 +1,17 @@
+
+    .CardImage{
+        height: 9rem;
+}
+
+
+.card{
+    height: 34rem;
+    padding: 10px;
+    margin-top: 10px;
+
+    
+}
+.card:hover{
+    border-color: rgb(124, 95, 95);
+    box-shadow: 2px 4px 0;
+}
