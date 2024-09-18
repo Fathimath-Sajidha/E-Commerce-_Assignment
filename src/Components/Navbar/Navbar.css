@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
-    background-color: rgb(63, 58, 61);
+    background-color: rgb(134, 112, 134);
     color: white;
 }
 .navbar-left{
@@ -30,4 +30,9 @@
     text-decoration: none;
     margin-left: 20px;
     margin-right: 20px;
+}
+.cartlogo:hover{
+   color: rgb(54, 56, 56);
+   
+   
 }

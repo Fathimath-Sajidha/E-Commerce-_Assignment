@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 
-function JeweleryCard(product) {
+function JeweleryCard({product}) {
   return (
     <Card className='card'  style={{ width: '18rem', height:'22rem'}}>
       <Card.Img  className='CardImage' variant="top" src={product.image} />

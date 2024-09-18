@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import ProductCard from '../../Components/Products/ProductCard';
 import './Home.css'
+import { ProductContext } from '../../App';
 
 function Home() {
-    const [products,setProducts]=useState([])
+    const {products,setProducts}=useContext(ProductContext)
     const navigate=useNavigate()
      useEffect(()=>{
         getProducts()
@@ -16,6 +17,7 @@ function Home() {
         setProducts(res.data)
       })
         .catch((err)=>{
+
           navigate('/')
   
         })

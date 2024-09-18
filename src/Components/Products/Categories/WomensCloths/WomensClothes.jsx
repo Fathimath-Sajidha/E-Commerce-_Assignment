@@ -12,7 +12,7 @@ function WomensClothes() {
         getProducts()
         },[])
     const getProducts = () => {
-      axios.get("https://fakestoreapi.com/products/category/men'sclothing").then(res => {
+      axios.get("https://fakestoreapi.com/products/category/women's clothing").then(res => {
         console.log(res);
         setProducts(res.data)
       })

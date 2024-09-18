@@ -2,11 +2,16 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
-import './Navbar.css'
+import './NavBar.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { store } from '../Redux/store'
+import { setCartCount,setCartItems } from '../Redux/CartSlice'
 
-function BasicExample() {
+function NavBar() {
+  const { cartCount } = useSelector((store) => store.cartData)
   return (
     <Navbar expand="lg" className="navbar">
       <Container>
@@ -24,8 +29,8 @@ function BasicExample() {
               <NavDropdown.Item href={'Electronics'}>Electronics
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
+              <NavDropdown.Item href={'/'}>
+                All Products
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
@@ -33,7 +38,9 @@ function BasicExample() {
         <div className='navbar-right'>
         
         <Nav.Link as={Link} to="/cart">
-            <FaShoppingCart size={20} />
+            <FaShoppingCart size={28}  className='cartlogo'/>
+            <Badge pill variant="danger">{cartCount}</Badge>
+
             
           </Nav.Link>
        
@@ -44,4 +51,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default NavBar;

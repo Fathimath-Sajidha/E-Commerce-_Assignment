@@ -11,7 +11,7 @@ function MensCloths() {
         getProducts()
         },[])
     const getProducts = () => {
-      axios.get('https://fakestoreapi.com/products/category/men\'s clothing').then(res => {
+      axios.get("https://fakestoreapi.com/products/category/men's clothing").then(res => {
         console.log(res);
         setProducts(res.data)
       })
